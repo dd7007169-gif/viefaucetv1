@@ -1,3 +1,5 @@
-coockie = 'xxxxxxx'
-user_agent = "xxxxx"
-bear = "xxxxxxx" #Autorization
+coockie = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjE4MDQ2YzVhMmQ0NmJlODQ5MTIxYyIsImlhdCI6MTc3NzQzNDY5NSwiZXhwIjoxNzc3NTIxMDk1fQ.nEhpXd6Zk5QY9yjtuKV-O84PIg4x5hlzauZLVKSxrUs"
+
+user_agent = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+
+bear = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjE4MDQ2YzVhMmQ0NmJlODQ5MTIxYyIsImlhdCI6MTc3NzQzNDY5NSwiZXhwIjoxNzc3NTIxMDk1fQ.nEhpXd6Zk5QY9yjtuKV-O84PIg4x5hlzauZLVKSxrUs"
