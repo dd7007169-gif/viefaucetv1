@@ -1,8 +1,36 @@
-# Python code obfuscated for Pak John - Clean Version
-import base64, codecs
+import requests
+import time
+from colorama import Fore, Style, init
+from cfg import coockie, user_agent, bear
 
-# Ini adalah 'inti' bot yang sudah saya amankan tanpa YouTube
-magic = 'aW1wb3J0IHJlcXVlc3RzDQppbXBvcnQgc3lzDQppbXBvcnQgdGltZQ0KZnJvbSBjb2xvcmFtYSBpbXBvcnQgRm9yZSwgU3R5bGUsIGluaXQNCmZyb20gY2ZnIGltcG9ydCBjb29ja2llLCB1c2VyX2FnZW50LCBiZWFyDQoNCmluaXQoYXV0b3Jlc2V0PVRydWUpDQoNCmRlZiBiYW5uZXIoKToNCiAgICBwcmludChmIntGb3JlLllFTExPV11CQVJDQSBCRVJTSUggKFRBTlBBIFlPVVRVQkUpIikNCiAgICBwcmludChmIntGb3JlLkdSRUVOfS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIikNCg0KZGVmIGNsYWltKCk6DQogICAgaGVhZGVycyA9IHsiSG9zdCI6ICJ2aWVmYXVjZXQuY29tIiwgImF1dGhvcml6YXRpb24iOiBiZWFyLCAidXNlci1hZ2VudCI6IHVzZXJfYWdlbnQsICJjb29raWUiOiBjb29ja2llfQ0KICAgIHRyeToNCiAgICAgICAgciA9IHJlcXVlc3RzLmdldCgiaHR0cHM6Ly92aWVmYXVjZXQuY29tL2FwaS9mYXVjZXQiLCBoZWFkZXJzPWhlYWRlcnMpDQogICAgICAgIGlmIHIuc3RhdHVzX2NvZGUgPT0gMjAwOg0KICAgICAgICAgICAgcHJpbnQoZ adventuresIntGb3JlLkdSRUVOXVtTVUtTRVNdIEtsYWltIEJlcmhhc2lsISIpDQogICAgICAgIGVsc2U6DQogICAgICAgICAgICBwcmludChmIntGb3JlLlJFRF1bR0FHQUxdIENlayBDb29raWUvQmVhclIpDQogICAgZXhjZXB0Og0KICAgICAgICBwYXNzDQoNCmJhbm5lcigpDQp3aGlsZSBUcnVlOg0KICAgIGNsYWltKCkNCiAgICB0aW1lLnNsZWVwKDYwKQ=='
+init(autoreset=True)
 
-# Proses menjalankan kode tanpa jejak YouTube
-eval(compile(base64.b64decode(magic),'<string>','exec'))
+def banner():
+    print(f"{Fore.YELLOW}==================================")
+    print(f"{Fore.GREEN}   BOT VIEFAUCET AKTIF - PAK JOHN")
+    print(f"{Fore.YELLOW}==================================")
+
+def claim():
+    url = "https://viefaucet.com/api/faucet"
+    headers = {
+        "Host": "viefaucet.com",
+        "authorization": bear,
+        "user-agent": user_agent,
+        "cookie": coockie
+    }
+    try:
+        r = requests.get(url, headers=headers)
+        if r.status_code == 200:
+            print(f"{Fore.CYAN}[{time.strftime('%H:%M:%S')}] {Fore.GREEN}Claim Berhasil! Saldo Bertambah.")
+        elif r.status_code == 429:
+            print(f"{Fore.YELLOW}[!] Harap Tunggu, Sedang Cooldown...")
+        else:
+            print(f"{Fore.RED}[!] Error: Cek kembali Cookie/Token di cfg.py")
+    except:
+        print(f"{Fore.RED}[!] Koneksi Terputus...")
+
+banner()
+while True:
+    claim()
+    # Tunggu 1 menit sebelum claim lagi
+    time.sleep(61)
