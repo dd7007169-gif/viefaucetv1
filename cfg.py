@@ -1,5 +1,0 @@
-coockie = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjE4MDQ2YzVhMmQ0NmJlODQ5MTIxYyIsImlhdCI6MTc3NzQ0MDU3OSwiZXhwIjoxNzc3NTI2OTc5fQ.62NbsgyxFCBgfXl9Oxi9IaEfYwIp0D1pMp0IFlqORe8"
-
-user_agent = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
-
-bear = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjE4MDQ2YzVhMmQ0NmJlODQ5MTIxYyIsImlhdCI6MTc3NzQ0MDU3OSwiZXhwIjoxNzc3NTI2OTc5fQ.62NbsgyxFCBgfXl9Oxi9IaEfYwIp0D1pMp0IFlqORe8"
